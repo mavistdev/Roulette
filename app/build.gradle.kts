@@ -4,16 +4,21 @@ plugins {
 
 android {
     namespace = "ru.mavist.roulette"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ru.mavist.roulette"
         minSdk = 27
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
     }
 
     buildTypes {
@@ -29,7 +34,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.yandex.android:mobileads:7.0.1") // вроде работать будет
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
